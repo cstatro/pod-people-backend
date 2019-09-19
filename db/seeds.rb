@@ -5,5 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.find_or_create_by(name: "Birdman")
-Podcast.find_or_create_by(name: "Peanutbutter Weekly")
+ u1 =User.find_or_create_by(name: "Birdman")
+ u2 =User.find_or_create_by(name: "Kanye West")
+ l1 = List.find_or_create_by(user: u1, name: "Birdbased Tunes")
+
+ Follower.find_or_create_by(user: u2,list: l1)
+
+ p1 = Podcast.find_or_create_by(name: "Peanutbutter Weekly")
+ p2 = Podcast.find_or_create_by(name: "Monday Morning Podcast")
+
