@@ -1,0 +1,2 @@
+class EpisodeListJoin < ApplicationRecord
+end

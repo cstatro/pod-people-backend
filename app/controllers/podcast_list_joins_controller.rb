@@ -1,0 +1,2 @@
+class PodcastListJoinsController < ApplicationController
+end
