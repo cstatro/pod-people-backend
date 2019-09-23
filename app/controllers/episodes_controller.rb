@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
     def create
-        episode = Episode.new(episode_params)
+        episode = Episode.where(:audio_link => params[:audio_link]).first_or_initialize(episode_params)
         episode.save
         render json: episode
     end
