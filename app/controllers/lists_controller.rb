@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
     def create
-        list = list.new(list_params)
+        list = List.new(list_params)
         list.save
         render json: list
     end
