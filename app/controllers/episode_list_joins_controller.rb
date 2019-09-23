@@ -1,2 +1,3 @@
 class EpisodeListJoinsController < ApplicationController
+    
 end
