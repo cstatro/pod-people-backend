@@ -8,6 +8,10 @@ class ListsController < ApplicationController
         list = List.find(params[:id])
         render json: list
     end
+    def index
+        lists = List.all 
+        render json: lists
+    end
 
 
     private
