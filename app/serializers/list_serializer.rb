@@ -1,3 +1,4 @@
 class ListSerializer < ActiveModel::Serializer
-  attributes :id,:name,:episodes,:podcasts,:followers,:user_id,:description
+  attributes :id,:name,:podcasts,:followers,:user_id,:description,:episodes
+  # has_many :episodes
 end
