@@ -7,5 +7,10 @@ class List < ApplicationRecord
     belongs_to :user
 
 
+    def buzzword_generate
+        arr = [self.podcasts.pluck(:genre),self.episodes.joins(:podcast).pluck(:genre)].flatten.sample(5).uniq
+    end
+
+
 
 end
