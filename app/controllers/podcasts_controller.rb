@@ -7,6 +7,6 @@ class PodcastsController < ApplicationController
 
     private
     def podcast_params
-        params.require(:podcast).permit(:genre,:publisher,:number_of_episodes,:image_url,:feed,:name)
+        params.require(:podcast).permit(:genre,:publisher,:number_of_episodes,:image_url,:feed,:name,:description)
     end
 end
