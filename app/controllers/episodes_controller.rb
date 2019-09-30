@@ -6,6 +6,6 @@ class EpisodesController < ApplicationController
     end
     private
     def episode_params
-        params.require(:episode).permit(:title,:image_url,:audio_link,:run_time,:episode_number,:podcast_id)
+        params.require(:episode).permit(:title,:image_url,:audio_link,:run_time,:episode_number,:podcast_id,:description)
     end
 end
