@@ -11,6 +11,6 @@ class User < ApplicationRecord
     def followed_lists
         self.followers.map {|f| f.list}
     end
-    
+
 
 end
