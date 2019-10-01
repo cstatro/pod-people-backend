@@ -12,7 +12,7 @@ class List < ApplicationRecord
     end
 
     def search_arr
-        [self.podcasts.pluck(:genre),self.episodes.joins(:podcast).pluck(:genre),self.podcasts.pluck(:description).map {|d|d.split(' ')}, self.episodes.pluck(:description).map { |d| d.split(' ')}].flatten.map {|s| s.downcase}
+        [self.podcasts.pluck(:genre),self.episodes.joins(:podcast).pluck(:genre),self.podcasts.pluck(:description,:name).flatten.map {|d|d.split(' ')}, self.episodes.pluck(:description,:title).flatten.map { |d| d.split(' ')}].flatten.map {|s| s.downcase}
     end
     def string_relevancy str
         self.search_arr.count(str.downcase)

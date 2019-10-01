@@ -12,6 +12,11 @@ class ListsController < ApplicationController
         lists = List.all 
         render json: lists
     end
+    def search
+        arr = request.headers['search'].split(',')
+        results = List.sort_by_relevancy(arr)
+        render json: results
+    end
 
 
     private
