@@ -17,6 +17,10 @@ class ListsController < ApplicationController
         results = List.sort_by_relevancy(arr)
         render json: results
     end
+    def destroy
+        list = List.find(params[:id]).destroy
+        render json: list   
+    end
 
 
     private

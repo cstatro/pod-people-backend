@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_30_180316) do
+ActiveRecord::Schema.define(version: 2019_10_01_174655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 2019_09_30_180316) do
     t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_pic", default: "https://icon-library.net/images/placeholder-image-icon/placeholder-image-icon-7.jpg"
   end
 
 end
