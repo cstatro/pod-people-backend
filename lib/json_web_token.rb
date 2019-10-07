@@ -6,7 +6,9 @@ class JsonWebToken
     end
 
     def self.decode(token)
-        JWT.decode(token,ENV["SECRET"])
+        JWT.decode(token, ENV["SECRET"])
+    rescue
+        nil
     end
    
 end
